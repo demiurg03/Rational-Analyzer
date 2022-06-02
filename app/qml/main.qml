@@ -11,13 +11,6 @@ Window {
     title: qsTr("Hello World")
 
 
-    WidgetAddProduct{
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.verticalCenterOffset: 0
-        anchors.horizontalCenterOffset: 0
-        anchors.horizontalCenter: parent.horizontalCenter
-
-    }
 
     Button{
         x: 400
@@ -51,16 +44,45 @@ Window {
         x: 435
         width: 40
         height: 40
-        text: qsTr("+")
+        text: "hard"
         anchors.right: button.left
         anchors.top: parent.top
+        enabled: false
         anchors.topMargin: 15
         anchors.rightMargin: 10
         font.bold: false
-        font.pointSize: 12
+        font.pointSize: 10
         onClicked: {
             //Calling the "addProduct" widget
         }
+    }
+
+    Button {
+        id: button2
+        x: 435
+        width: 40
+        height: 40
+        text: qsTr("product")
+        anchors.right: button1.left
+        anchors.top: parent.top
+        font.pointSize: 6
+        anchors.topMargin: 15
+        anchors.rightMargin: 10
+        font.bold: false
+    }
+
+    Button {
+        id: button3
+        x: 435
+        width: 40
+        height: 40
+        text: qsTr("+")
+        anchors.right: button2.left
+        anchors.top: parent.top
+        font.pointSize: 12
+        anchors.topMargin: 15
+        anchors.rightMargin: 10
+        font.bold: false
     }
 
     SpinBox {
@@ -141,4 +163,21 @@ Window {
         }
     }
 
+
+    WidgetAddProduct{
+        id: widgetAddFood
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: 0
+        anchors.horizontalCenterOffset: 0
+        anchors.horizontalCenter: parent.horizontalCenter
+
+    }
+
+
+
+    WidgetAddFood {
+        id: widgetAddProduct
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
 }
