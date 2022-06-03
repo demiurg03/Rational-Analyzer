@@ -53,23 +53,26 @@ Window {
         font.bold: false
         font.pointSize: 10
         onClicked: {
-            //Calling the "addProduct" widget
+            //Calling the "hard" widget
         }
     }
 
     Button {
-        id: button2
-        x: 435
-        width: 40
-        height: 40
-        text: qsTr("product")
-        anchors.right: button1.left
-        anchors.top: parent.top
-        font.pointSize: 6
-        anchors.topMargin: 15
-        anchors.rightMargin: 10
-        font.bold: false
-    }
+            id: button2
+            x: 435
+            width: 40
+            height: 40
+            text: qsTr("product")
+            anchors.right: button1.left
+            anchors.top: parent.top
+            font.pointSize: 6
+            anchors.topMargin: 15
+            anchors.rightMargin: 10
+            font.bold: false
+            onClicked: {
+                widgetAddProduct.visible = true ;
+            }
+        }
 
     Button {
         id: button3
@@ -83,6 +86,9 @@ Window {
         anchors.topMargin: 15
         anchors.rightMargin: 10
         font.bold: false
+        onClicked: {
+            widgetAddFood.visible = true ;
+        }
     }
 
     SpinBox {
@@ -164,20 +170,22 @@ Window {
     }
 
 
-    WidgetAddProduct{
+
+
+
+    WidgetAddFood {
         id: widgetAddFood
+        visible: false
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+    WidgetAddProduct{
+        id: widgetAddProduct
+        visible: false
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: 0
         anchors.horizontalCenterOffset: 0
         anchors.horizontalCenter: parent.horizontalCenter
 
-    }
-
-
-
-    WidgetAddFood {
-        id: widgetAddProduct
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
     }
 }
