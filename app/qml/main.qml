@@ -12,63 +12,39 @@ Window {
 
 
 
-    TextField {
-        id: textField
-        x: 124
-        y: 23
-        placeholderText: qsTr("Text Field")
-        onEditingFinished: {
 
-            var result = Backend.getProductForName(textField.text);
 
-            for (var prop in result) {
-                listView.model.append({itemId: result[prop].id,  name:  result[prop].name })
+    SwipeView {
+        id: swipeView
+        anchors.fill: parent
+        currentIndex: 0
+
+        Item {
+
+            WidgetStart {
+                id: widgetStart
             }
-
-
-        }
-    }
-
-    ListView {
-        id: listView
-        x: 45
-        y: 108
-        width: 366
-        height: 433
-        model: ListModel {
         }
 
+        Item {
+            WidgetAddFood {
+                id: widgetAddFood
+                anchors.fill: parent
+            }
+        }
 
-        delegate: Item {
-            x: 5
-            width: 80
-            height: 40
-
-
-            Row {
-                id: row1
-
-                Text {
-                    text: name
-                    anchors.verticalCenter: parent.verticalCenter
-                    font.bold: true
-
-                }
-
-                Button{
-                    text: "x"
-                    onClicked: {
-                        console.log(itemId)
-                         listView.model.remove(index);
-                    }
-                }
-
-                spacing: 10
+        Item {
+            WidgetAddProduct {
+                id: widgetAddProduct
+                anchors.fill: parent
             }
         }
     }
+
 
 
 
 
 }
+
+
