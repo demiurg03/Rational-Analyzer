@@ -27,6 +27,8 @@ struct Product{
 
 public:
 
+
+
     int m_id;
     int m_calories;
 
@@ -34,7 +36,7 @@ public:
 
 };
 
-
+Q_DECLARE_METATYPE(Product);
 
 class BackEnd : public QObject
 {
@@ -53,6 +55,46 @@ public:
     Q_INVOKABLE
     Product getProduct(const int id);
 
+    Q_INVOKABLE
+     QVariantList getProductForName(const QString &name){
+
+
+
+        const auto result =  getProductPr([&name](const Product &ptr)->bool{
+            return ptr.m_name.contains(name);
+        });
+
+
+        QVariantList list;
+
+
+        for(const auto &it : result){
+            QVariant tmp = QVariant::fromValue(it);
+
+            list.append(tmp);
+        }
+
+
+
+        return list;
+    }
+
+
+
+
+
+    QList<Product> getProductPr(std::function<bool(const Product&)> fn){
+
+        QList<Product> list;
+
+        for(const auto &it : productMap){
+            if( fn(it)){
+                list.append(it);
+            }
+        }
+
+        return list;
+    }
 
 signals:
 
@@ -61,7 +103,13 @@ signals:
 private:
 
     QSqlDatabase m_dbase;
+    QMap<std::size_t, Product> productMap;
 
     void m_createDB();
+
+    void cacheDatabase();
+
+
+
 
 };
