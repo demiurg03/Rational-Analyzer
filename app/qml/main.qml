@@ -3,20 +3,48 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 
 Window {
-    width: 640
-    height: 480
+    id: window
+    width: 480
+    height: 640
     visible: true
-    title: qsTr("Hello World")
+
+    title: qsTr("rationalAnalyzer")
 
 
-    WidgetAddProduct{
 
-    }
 
-    Button{
-        onClicked: {
-            Backend.getProduct(1);
+
+    SwipeView {
+        id: swipeView
+        anchors.fill: parent
+        currentIndex: 0
+
+        Item {
+
+            WidgetStart {
+                id: widgetStart
+            }
+        }
+
+        Item {
+            WidgetAddFood {
+                id: widgetAddFood
+                anchors.fill: parent
+            }
+        }
+
+        Item {
+            WidgetAddProduct {
+                id: widgetAddProduct
+                anchors.fill: parent
+            }
         }
     }
 
+
+
+
+
 }
+
+
