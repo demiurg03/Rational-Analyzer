@@ -20,21 +20,7 @@ Item {
         layer.enabled: false
     }
 
-    Button {
-        id: btnCloseProduct
-        x: 172
-        y: 8
-        width: 20
-        height: 20
-        text: qsTr("X")
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.rightMargin: 1
-        anchors.topMargin: 1
-        onClicked: {
-        widgetAddProduct.visible = false ;
-        }
-    }
+
 
     TextField {
         id: textFieldName

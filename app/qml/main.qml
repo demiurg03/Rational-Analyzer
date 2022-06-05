@@ -17,7 +17,7 @@ Window {
     SwipeView {
         id: swipeView
         anchors.fill: parent
-        currentIndex: 0
+        currentIndex: tabBar.currentIndex
 
         Item {
 
@@ -29,6 +29,7 @@ Window {
         Item {
             WidgetAddFood {
                 id: widgetAddFood
+                visible: true
                 anchors.fill: parent
             }
         }
@@ -36,12 +37,46 @@ Window {
         Item {
             WidgetAddProduct {
                 id: widgetAddProduct
+                visible: true
                 anchors.fill: parent
             }
         }
     }
 
 
+    TabBar {
+        id: tabBar
+        height: 40
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.leftMargin: 0
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 0
+        currentIndex: swipeView.currentIndex
+
+        TabButton {
+            text: qsTr("WidgetStart")
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            anchors.topMargin: 0
+        }
+        TabButton {
+            text: qsTr("WidgetAddProduct")
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            anchors.topMargin: 0
+        }
+        TabButton {
+            text: qsTr("WidgetAddFood")
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            anchors.topMargin: 0
+        }
+    }
 
 
 

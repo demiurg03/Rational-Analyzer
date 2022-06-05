@@ -6,25 +6,13 @@ Item {
     height: 250
 
 
+
     Rectangle {
         id: rectangle
         color: "#efefef"
         anchors.fill: parent
 
-        Button {
-            id: btnCloseFood
-            x: 308
-            width: 20
-            height: 20
-            text: qsTr("X")
-            anchors.right: parent.right
-            anchors.top: parent.top
-            anchors.topMargin: 1
-            anchors.rightMargin: 1
-            onClicked: {
-                widgetAddFood.visible = false ;
-            }
-        }
+
 
     }
 
@@ -66,8 +54,8 @@ Item {
         anchors.leftMargin: 20
 
         onClicked: {
-                        widgetAddProduct.visible = true ;
-                    }
+            widgetAddProduct.visible = true ;
+        }
 
     }
 
