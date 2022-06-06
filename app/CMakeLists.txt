@@ -23,6 +23,8 @@ set(PROJECT_SOURCES
         src/Backend.cpp
         src/Backend.h
         locale/translator.qrc
+        src/Product.cpp
+        src/Product.hpp
         ${TS_FILES}
 )
 

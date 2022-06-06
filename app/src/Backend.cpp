@@ -69,6 +69,25 @@ Product BackEnd::getProduct(const int id){
     return productMap.value( id );
 }
 
+QVariantList BackEnd::getProductForName(const QString &name){
+
+    return getProductPredicateVariant([&name](const Product& product){return product.m_name == name;});
+}
+
+QVariantList BackEnd::getProductPredicateVariant(std::function<bool (const Product &)> fn){
+
+    QVariantList list;
+
+    for(const auto &it : productMap){
+        if( fn(it)){
+            QVariant  variant = QVariant::fromValue(it);
+            list.append(variant);
+        }
+    }
+
+    return list;
+}
+
 void BackEnd::m_createDB(){
 
     QSqlQuery query( m_dbase );

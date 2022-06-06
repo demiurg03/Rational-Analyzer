@@ -19,22 +19,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Backend.cpp" line="83"/>
+        <location filename="../src/Backend.cpp" line="64"/>
         <source>error get product</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Backend.cpp" line="98"/>
+        <location filename="../src/Backend.cpp" line="78"/>
         <source>db error create Product</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Backend.cpp" line="106"/>
+        <location filename="../src/Backend.cpp" line="86"/>
         <source>db error create Day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/Backend.cpp" line="114"/>
+        <location filename="../src/Backend.cpp" line="94"/>
         <source>db error create ProductList</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42,23 +42,18 @@
 <context>
     <name>WidgetAddFood</name>
     <message>
-        <location filename="../qml/WidgetAddFood.qml" line="19"/>
-        <source>X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="../qml/WidgetAddFood.qml" line="29"/>
         <location filename="../qml/WidgetAddFood.qml" line="41"/>
-        <location filename="../qml/WidgetAddFood.qml" line="53"/>
         <source>Text Field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/WidgetAddFood.qml" line="62"/>
+        <location filename="../qml/WidgetAddFood.qml" line="50"/>
         <source>New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/WidgetAddFood.qml" line="79"/>
+        <location filename="../qml/WidgetAddFood.qml" line="67"/>
         <source>Consider</source>
         <translation type="unfinished"></translation>
     </message>
@@ -66,66 +61,53 @@
 <context>
     <name>WidgetAddProduct</name>
     <message>
-        <location filename="../qml/WidgetAddProduct.qml" line="29"/>
-        <source>X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/WidgetAddProduct.qml" line="44"/>
+        <location filename="../qml/WidgetAddProduct.qml" line="30"/>
         <source>Product name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/WidgetAddProduct.qml" line="53"/>
+        <location filename="../qml/WidgetAddProduct.qml" line="39"/>
         <source>add product</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/WidgetAddProduct.qml" line="73"/>
+        <location filename="../qml/WidgetAddProduct.qml" line="59"/>
         <source>calories </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WidgetStart</name>
+    <message>
+        <location filename="../qml/WidgetStart.qml" line="15"/>
+        <source>Text Field</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="../qml/main.qml" line="11"/>
         <source>Hello World</source>
-        <translation type="unfinished">Привет мир</translation>
+        <translation type="obsolete">Привет мир</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="35"/>
-        <source>Set...</source>
+        <location filename="../qml/main.qml" line="11"/>
+        <source>rationalAnalyzer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="65"/>
-        <source>product</source>
+        <location filename="../qml/main.qml" line="59"/>
+        <source>WidgetStart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="82"/>
-        <source>+</source>
+        <location filename="../qml/main.qml" line="66"/>
+        <source>WidgetAddProduct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="118"/>
-        <source>Product</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/main.qml" line="134"/>
-        <source>Cal/100g</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/main.qml" line="148"/>
-        <source>Grams</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/main.qml" line="161"/>
-        <source>Calories</source>
+        <location filename="../qml/main.qml" line="73"/>
+        <source>WidgetAddFood</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

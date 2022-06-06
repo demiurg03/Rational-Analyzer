@@ -15,28 +15,7 @@
 
 #include <qqml.h>
 
-struct Product{
-    Q_GADGET
-
-
-
-
-    Q_PROPERTY(int id MEMBER m_id)
-    Q_PROPERTY(int calories MEMBER m_calories)
-    Q_PROPERTY(QString name MEMBER m_name)
-
-public:
-
-
-
-    int m_id;
-    int m_calories;
-
-    QString m_name;
-
-};
-
-Q_DECLARE_METATYPE(Product);
+#include "Product.hpp"
 
 class BackEnd : public QObject
 {
@@ -56,45 +35,13 @@ public:
     Product getProduct(const int id);
 
     Q_INVOKABLE
-     QVariantList getProductForName(const QString &name){
-
-
-
-        const auto result =  getProductPr([&name](const Product &ptr)->bool{
-            return ptr.m_name.contains(name);
-        });
-
-
-        QVariantList list;
-
-
-        for(const auto &it : result){
-            QVariant tmp = QVariant::fromValue(it);
-
-            list.append(tmp);
-        }
-
-
-
-        return list;
-    }
+     QVariantList getProductForName(const QString &name);
 
 
 
 
 
-    QList<Product> getProductPr(std::function<bool(const Product&)> fn){
-
-        QList<Product> list;
-
-        for(const auto &it : productMap){
-            if( fn(it)){
-                list.append(it);
-            }
-        }
-
-        return list;
-    }
+   QVariantList getProductPredicateVariant(std::function<bool(const Product&)> fn);
 
 signals:
 
