@@ -34,8 +34,10 @@ public:
     Q_INVOKABLE
     Product getProduct(const int id);
 
+    //FIMI: rename to getProductByName
     Q_INVOKABLE
      QVariantList getProductForName(const QString &name);
+     
 
 
 
