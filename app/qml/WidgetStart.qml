@@ -14,6 +14,7 @@ Item {
             placeholderText: qsTr("Text Field")
             onEditingFinished: {
 
+//FIXME: reanme getProductByName
                 var result = Backend.getProductForName(textField.text);
 
                 for (var prop in result) {
