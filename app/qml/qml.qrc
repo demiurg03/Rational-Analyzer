@@ -3,6 +3,7 @@
         <file>main.qml</file>
         <file>WidgetAddProduct.qml</file>
         <file>WidgetAddFood.qml</file>
+        <file>WidgetCircularCalories.qml</file>
         <file>WidgetStart.qml</file>
     </qresource>
 </RCC>

@@ -23,6 +23,7 @@ Window {
 
             WidgetStart {
                 id: widgetStart
+                anchors.fill: parent
             }
         }
 

@@ -2,8 +2,8 @@ import QtQuick 2.0
 import QtQuick.Controls 2.12
 Item {
     id: item1
-    width: 200
-    height: 225
+    width: 480
+    height: 640
     layer.smooth: false
     layer.mipmap: false
 
@@ -24,9 +24,11 @@ Item {
 
     TextField {
         id: textFieldName
-        x: 40
-        y: 50
-        width: 120
+        width: 400
+        height: 20
+        anchors.top: parent.top
+        anchors.topMargin: 50
+        anchors.horizontalCenter: parent.horizontalCenter
         placeholderText: qsTr("Product name")
     }
 
@@ -35,8 +37,10 @@ Item {
         x: 40
         y: 150
         width: 80
-        height: 25
+        height: textFieldName.height
         text: qsTr("add product")
+        anchors.right: textFieldCalories.right
+        anchors.rightMargin: 0
 
         onClicked: {
 
@@ -53,9 +57,11 @@ Item {
 
     TextField {
         id: textFieldCalories
-        x: 40
-        y: 100
-        width: 120
+        width: textFieldName.width
+        height: textFieldName.height
+        anchors.top: textFieldName.bottom
+        anchors.topMargin: 30
+        anchors.horizontalCenter: parent.horizontalCenter
         placeholderText: qsTr("calories ")
 
         onTextChanged: {

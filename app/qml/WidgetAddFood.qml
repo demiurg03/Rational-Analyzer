@@ -2,8 +2,8 @@ import QtQuick 2.0
 import QtQuick.Controls 2.12
 Item {
     id: item1
-    width: 360
-    height: 250
+    width: 480
+    height: 640
 
 
 
@@ -20,11 +20,12 @@ Item {
         id: textFieldProduct
         x: 40
         y: 50
-        width: 120
+        width: 320
+        height: 20
         text: "Product"
-        anchors.left: parent.left
         anchors.top: parent.top
-        anchors.leftMargin: 40
+        anchors.horizontalCenterOffset: -50
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.topMargin: 50
         placeholderText: qsTr("Text Field")
     }
@@ -33,7 +34,8 @@ Item {
         id: textFieldGrams
         x: 180
         y: 50
-        width: 60
+        width: 80
+        height: textFieldProduct.height
         text: "Grams"
         anchors.left: textFieldProduct.right
         anchors.top: parent.top
@@ -45,13 +47,13 @@ Item {
     Button {
         id: btnNew
         x: 247
-        width: 60
-        height: 20
+        width: textFieldGrams.width
+        height: textFieldProduct.height
         text: qsTr("New")
-        anchors.left: textFieldGrams.right
+        anchors.left: btnConsider.left
         anchors.top: btnConsider.bottom
         anchors.topMargin: 30
-        anchors.leftMargin: 20
+        anchors.leftMargin: 0
 
         onClicked: {
             widgetAddProduct.visible = true ;
@@ -62,13 +64,13 @@ Item {
     Button {
         id: btnConsider
         x: 247
-        width: 60
-        height: 20
+        width: textFieldGrams.width
+        height: textFieldProduct.height
         text: qsTr("Consider")
-        anchors.left: textFieldGrams.right
-        anchors.top: parent.top
-        anchors.topMargin: 50
-        anchors.leftMargin: 20
+        anchors.right: textFieldGrams.right
+        anchors.top: textFieldGrams.bottom
+        anchors.rightMargin: 0
+        anchors.topMargin: 30
     }
 
 
