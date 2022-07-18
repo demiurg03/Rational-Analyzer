@@ -22,7 +22,10 @@ set(PROJECT_SOURCES
         qml/qml.qrc
         src/Backend.cpp
         src/Backend.h
+        src/Database.cpp
+        src/Database.hpp
         locale/translator.qrc
+        resource/resource.qrc
         ${TS_FILES}
 )
 
