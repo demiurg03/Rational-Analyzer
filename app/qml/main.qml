@@ -11,34 +11,8 @@ Window {
     title: qsTr("rationalAnalyzer")
 
 
+    AddProductItem{
 
-
-
-    SwipeView {
-        id: swipeView
-        anchors.fill: parent
-        currentIndex: 0
-
-        Item {
-
-            WidgetStart {
-                id: widgetStart
-            }
-        }
-
-        Item {
-            WidgetAddFood {
-                id: widgetAddFood
-                anchors.fill: parent
-            }
-        }
-
-        Item {
-            WidgetAddProduct {
-                id: widgetAddProduct
-                anchors.fill: parent
-            }
-        }
     }
 
 

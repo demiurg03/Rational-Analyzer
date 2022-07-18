@@ -1,8 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>WidgetAddProduct.qml</file>
-        <file>WidgetAddFood.qml</file>
-        <file>WidgetStart.qml</file>
+        <file>AddProductItem.qml</file>
+        <file>SpinBox.qml</file>
     </qresource>
 </RCC>

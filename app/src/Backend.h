@@ -23,7 +23,14 @@ public:
     ~BackEnd();
 
 
-
+    Q_INVOKABLE
+    void addProduct(const QString name, const int calories){
+    qDebug()<<"hello";
+        Product product;
+        product.m_calories = calories;
+        product.m_name = name;
+        _databaseInterface->appendNewProduct(product);
+    }
 
 
 signals:
