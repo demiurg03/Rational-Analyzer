@@ -55,3 +55,17 @@ QVector<Product> DatabaseInterface::getProductByPredicate(std::function<bool (co
 
     return productList;
 }
+
+void DatabaseInterface::appendNewProduct(const Product &product){
+    auto query = _db->createQuery();
+
+
+    query.prepare(R"(INSERT INTO "Product"(Name, Calories) VALUES(:name,:calories);)");
+
+    query.bindValue(":name", product.m_name);
+    query.bindValue(":calories", product.m_calories);
+
+    if(!query.exec()){
+        qWarning()<< tr("error add product") << query.lastError();
+    }
+}

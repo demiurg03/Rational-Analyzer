@@ -20,6 +20,12 @@ void Database::open(const QString &driver){
 
 }
 
+QSqlQuery Database::createQuery(){
+    QSqlQuery query(_db);
+
+    return query;
+}
+
 void Database::_createTable(){
     QSqlQuery query( _db );
 

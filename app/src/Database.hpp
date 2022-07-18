@@ -49,11 +49,7 @@ public:
     void open(const QString &driver = "QSQLITE");
 
 
-    QSqlQuery createQuery(){
-        QSqlQuery query(_db);
-
-        return std::move(query);
-    }
+    QSqlQuery createQuery();
 private:
     QSqlDatabase _db;
 
