@@ -26,6 +26,8 @@ set(PROJECT_SOURCES
         src/Database.hpp
         locale/translator.qrc
         resource/resource.qrc
+        src/DatabaseInterface.cpp
+        src/DatabaseInterface.hpp
         ${TS_FILES}
 )
 

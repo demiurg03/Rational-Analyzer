@@ -3,14 +3,19 @@
 
 
 
-
 BackEnd::BackEnd(QObject *parent)
     : QObject(parent)
 {
 
-    qRegisterMetaType<Product>();
+
 
     _database.open();
+
+    _databaseInterface = new DatabaseInterface(&_database);
+
+
+
+
 
 }
 

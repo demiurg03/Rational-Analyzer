@@ -9,6 +9,34 @@
 
 QString readAllFromFile(const QString &fileName);
 
+
+struct Product{
+    Q_GADGET
+
+
+
+
+    Q_PROPERTY(int id MEMBER m_id)
+    Q_PROPERTY(int calories MEMBER m_calories)
+    Q_PROPERTY(QString name MEMBER m_name)
+
+public:
+
+
+
+    int m_id;
+    int m_calories;
+
+    QString m_name;
+
+};
+
+Q_DECLARE_METATYPE(Product);
+
+
+
+
+
 class Database : public QObject{
     Q_OBJECT
 
@@ -21,6 +49,11 @@ public:
     void open(const QString &driver = "QSQLITE");
 
 
+    QSqlQuery createQuery(){
+        QSqlQuery query(_db);
+
+        return std::move(query);
+    }
 private:
     QSqlDatabase _db;
 

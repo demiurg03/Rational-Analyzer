@@ -1,7 +1,7 @@
 #include "Database.hpp"
 
 Database::Database(){
-
+    qRegisterMetaType<Product>();
 }
 
 void Database::open(const QString &driver){
