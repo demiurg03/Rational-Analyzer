@@ -1,8 +1,8 @@
 #pragma once
 
-#include <QObject>
 #include <QDate>
 #include <QGuiApplication>
+#include <QObject>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QTranslator>
@@ -10,32 +10,23 @@
 
 #include "DatabaseInterface.hpp"
 
-
-class BackEnd : public QObject
-{
-    Q_OBJECT
-    //Q_PROPERTY(QString userName READ userName WRITE setUserName NOTIFY userNameChanged)
-    QML_ELEMENT
+class BackEnd : public QObject {
+  Q_OBJECT
+  // Q_PROPERTY(QString userName READ userName WRITE setUserName NOTIFY
+  // userNameChanged)
+  QML_ELEMENT
 
 public:
-    explicit BackEnd(QObject *parent = nullptr);
+  explicit BackEnd(QObject *parent = nullptr);
 
-    ~BackEnd();
+  ~BackEnd();
 
-
-    Q_INVOKABLE
-    void addProduct(const QString name, const int calories);
-
+  Q_INVOKABLE
+  void addProduct(const QString name, const int calories);
 
 signals:
 
-
-
 private:
-
-
-Database _database;
-DatabaseInterface *_databaseInterface;
-
-
+  Database _database;
+  DatabaseInterface *_databaseInterface;
 };
