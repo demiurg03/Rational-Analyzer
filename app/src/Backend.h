@@ -1,25 +1,9 @@
 #pragma once
 
-#include <QDate>
-#include <QGuiApplication>
-#include <QObject>
-#include <QQmlApplicationEngine>
-#include <QQmlContext>
-#include <QTranslator>
 #include <qqml.h>
 
 #include "DatabaseInterface.hpp"
 
-template <typename T> QVariantList convertToVariantList(T begin, T end) {
-
-  QVariantList result;
-
-  std::for_each(begin, end, [&result](auto &elm) {
-    result.append(QVariant::fromValue(elm));
-  });
-
-  return result;
-}
 
 class BackEnd : public QObject {
   Q_OBJECT
@@ -28,7 +12,7 @@ class BackEnd : public QObject {
   QML_ELEMENT
 
 public:
-  explicit BackEnd(QObject *parent = nullptr);
+  explicit BackEnd();
 
   ~BackEnd();
 
@@ -36,6 +20,8 @@ public:
   void addProduct(const QString name, const int calories);
 
   Q_INVOKABLE QVariantList getAllProduct();
+
+
 
 private slots:
   void onUpdateDatabase();

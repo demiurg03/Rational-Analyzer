@@ -1,12 +1,11 @@
 #pragma once
 #include <QDebug>
-#include <QFile>
 #include <QSql>
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
 
-QString readAllFromFile(const QString &fileName);
+#include "tool.hpp"
 
 struct Product {
   Q_GADGET

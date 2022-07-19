@@ -36,10 +36,3 @@ void Database::_createTable() {
 }
 
 //###
-QString readAllFromFile(const QString &fileName) {
-  QFile file(fileName);
-
-  file.open(QFile::ReadOnly);
-
-  return file.readAll();
-}

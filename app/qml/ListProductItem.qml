@@ -4,16 +4,16 @@ import QtQuick.Controls 2.12
 Item {
 
     Connections {
-            target: Backend
-            onUpdateDatabase: {
-               updateList()
-            }
+        target: Backend
+
+
+
+        function onUpdateDatabase() {
+            updateList();
         }
 
 
-//    function onUpdateDatabase(){
-//        updateList();
-//    }
+    }
 
     function updateList(){
         listView.model.clear();
@@ -71,8 +71,3 @@ Item {
 
 }
 
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
-##^##*/

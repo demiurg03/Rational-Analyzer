@@ -28,6 +28,8 @@ set(PROJECT_SOURCES
         resource/resource.qrc
         src/DatabaseInterface.cpp
         src/DatabaseInterface.hpp
+        src/tool.hpp
+        src/tool.cpp
         ${TS_FILES}
 )
 

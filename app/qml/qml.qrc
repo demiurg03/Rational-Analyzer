@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>AddProductItem.qml</file>
-        <file>SpinBox.qml</file>
         <file>ListProductItem.qml</file>
     </qresource>
 </RCC>

@@ -1,3 +1,7 @@
+#include <QTranslator>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
 
 #include "Backend.h"
 

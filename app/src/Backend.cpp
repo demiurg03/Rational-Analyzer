@@ -1,6 +1,6 @@
 #include "Backend.h"
 
-BackEnd::BackEnd(QObject *parent) : QObject(parent) {
+BackEnd::BackEnd() : QObject(nullptr) {
 
   _database.open();
 

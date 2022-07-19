@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Database.hpp"
 #include <QObject>
+#include "Database.hpp"
 
 class DatabaseInterface : public QObject {
   Q_OBJECT
