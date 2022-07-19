@@ -59,4 +59,6 @@ void DatabaseInterface::appendNewProduct(const Product &product) {
   if (!query.exec()) {
     qWarning() << tr("error add product") << query.lastError();
   }
+
+  emit updateDatabase();
 }

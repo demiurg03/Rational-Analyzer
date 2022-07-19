@@ -16,6 +16,9 @@ public:
 
   void appendNewProduct(const Product &product);
 
+signals:
+  void updateDatabase();
+
 private:
   Database *_db;
 };

@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 
-Window {
+ApplicationWindow {
     id: window
     width: 480
     height: 640
@@ -10,10 +10,37 @@ Window {
 
     title: qsTr("rationalAnalyzer")
 
+    SwipeView {
+        id: swipeView
+        anchors.fill: parent
+        currentIndex: tabBar.currentIndex
 
-    AddProductItem{
+        AddProductItem{
+
+        }
+
+        ListProductItem{
+
+        }
 
     }
+
+    footer: TabBar {
+        id: tabBar
+        currentIndex: swipeView.currentIndex
+
+        TabButton {
+            text: qsTr("add product")
+        }
+        TabButton {
+            text: qsTr("list product")
+        }
+
+    }
+
+
+
+
 
 
 
