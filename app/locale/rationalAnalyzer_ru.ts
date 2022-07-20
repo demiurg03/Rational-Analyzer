@@ -4,12 +4,12 @@
 <context>
     <name>AddProductItem</name>
     <message>
-        <location filename="../qml/AddProductItem.qml" line="15"/>
+        <location filename="../qml/AddProductItem.qml" line="47"/>
         <source>add product</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AddProductItem.qml" line="41"/>
+        <location filename="../qml/AddProductItem.qml" line="40"/>
         <source>Text Field</source>
         <translation type="unfinished"></translation>
     </message>
@@ -44,6 +44,16 @@
     <message>
         <location filename="../qml/main.qml" line="11"/>
         <source>rationalAnalyzer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/main.qml" line="33"/>
+        <source>add product</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/main.qml" line="36"/>
+        <source>list product</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

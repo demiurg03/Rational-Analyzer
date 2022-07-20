@@ -8,7 +8,7 @@ Item {
 
     function addProduct(){
         var productName = productNameEdit.text;
-        var productCalories = productCaloriesEdit.getValue();
+        var productCalories = productCaloriesEdit.value;
         Backend.addProduct(productName, productCalories);
 
     }

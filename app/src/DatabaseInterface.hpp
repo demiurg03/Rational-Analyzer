@@ -1,7 +1,7 @@
 #pragma once
 
-#include <QObject>
 #include "Database.hpp"
+#include <QObject>
 
 class DatabaseInterface : public QObject {
   Q_OBJECT
@@ -15,6 +15,8 @@ public:
                         bool stopFirst = false);
 
   void appendNewProduct(const Product &product);
+
+  void removeProduct(const int id);
 
 signals:
   void updateDatabase();

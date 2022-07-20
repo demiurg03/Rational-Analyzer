@@ -2,15 +2,20 @@
 
 BackEnd::BackEnd() : QObject(nullptr) {
 
-  _database.open();
+  _database = new Database;
 
-  _databaseInterface = new DatabaseInterface(&_database);
+  _database->open();
+
+  _databaseInterface = new DatabaseInterface(_database);
 
   connect(_databaseInterface, &DatabaseInterface::updateDatabase, this,
           &BackEnd::onUpdateDatabase);
 }
 
-BackEnd::~BackEnd() {}
+BackEnd::~BackEnd() {
+  delete _databaseInterface;
+  delete _database;
+}
 
 void BackEnd::addProduct(const QString name, const int calories) {
   Product product;
@@ -25,6 +30,10 @@ QVariantList BackEnd::getAllProduct() {
       _databaseInterface->getProductByPredicate([](auto &) { return true; });
 
   return convertToVariantList(productList.begin(), productList.end());
+}
+
+void BackEnd::removeProduct(const int id) {
+  _databaseInterface->removeProduct(id);
 }
 
 void BackEnd::onUpdateDatabase() { emit updateDatabase(); }

@@ -51,7 +51,7 @@ void DatabaseInterface::appendNewProduct(const Product &product) {
   auto query = _db->createQuery();
 
   query.prepare(
-      R"(INSERT INTO "Product"(Name, Calories) VALUES(:name,:calories);)");
+      R"(INSERT INTO Product(Name, Calories) VALUES(:name,:calories);)");
 
   query.bindValue(":name", product.m_name);
   query.bindValue(":calories", product.m_calories);
@@ -61,4 +61,22 @@ void DatabaseInterface::appendNewProduct(const Product &product) {
   }
 
   emit updateDatabase();
+}
+
+void DatabaseInterface::removeProduct(const int id){
+
+    auto query = _db->createQuery();
+
+    query.prepare(
+        R"(DELETE FROM Product WHERE ID=:id;)");
+
+    query.bindValue(":id",id);
+
+    if (!query.exec()) {
+      qWarning() << tr("error add product") << query.lastError();
+    }
+
+    emit updateDatabase();
+
+
 }

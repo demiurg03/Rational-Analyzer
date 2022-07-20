@@ -16,24 +16,28 @@ Item {
     }
 
     function updateList(){
-        listView.model.clear();
+        productListView.model.clear();
 
         var productList = Backend.getAllProduct();
 
         for (var index in productList) {
             var elm = productList[index];
-            listView.model.append({itemId: elm.id,  name:  elm.name })
+            productListView.model.append({itemId: elm.id,  itemName:  elm.name })
 
         }
     }
 
+    function removeProduct(id){
+        Backend.removeProduct(id);
+    }
+
     ListView {
-        id: listView
+        id: productListView
         anchors.fill: parent
 
-        model: ListModel {
-        }
+        model: ListModel{
 
+        }
 
         delegate: Item {
             x: 5
@@ -45,7 +49,7 @@ Item {
                 id: row1
 
                 Text {
-                    text: name
+                    text: itemName
                     anchors.verticalCenter: parent.verticalCenter
                     font.bold: true
 
@@ -54,7 +58,7 @@ Item {
                 Button{
                     text: "x"
                     onClicked: {
-                        listView.model.remove(index);
+                        removeProduct(itemId);
                     }
                 }
 
