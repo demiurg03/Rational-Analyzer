@@ -30,6 +30,6 @@ signals:
   void updateDatabase();
 
 private:
-  Database *_database;
-  DatabaseInterface *_databaseInterface;
+  QScopedPointer<Database> _database;
+  QScopedPointer<DatabaseInterface> _databaseInterface;
 };

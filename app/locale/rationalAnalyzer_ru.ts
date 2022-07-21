@@ -31,6 +31,7 @@
     <name>DatabaseInterface</name>
     <message>
         <location filename="../src/DatabaseInterface.cpp" line="60"/>
+        <location filename="../src/DatabaseInterface.cpp" line="76"/>
         <source>error add product</source>
         <translation type="unfinished"></translation>
     </message>

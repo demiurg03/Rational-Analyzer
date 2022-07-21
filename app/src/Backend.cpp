@@ -2,19 +2,19 @@
 
 BackEnd::BackEnd() : QObject(nullptr) {
 
-  _database = new Database;
+  _database.reset(new Database);
 
   _database->open();
 
-  _databaseInterface = new DatabaseInterface(_database);
+  _databaseInterface.reset(new DatabaseInterface(_database.get()));
 
-  connect(_databaseInterface, &DatabaseInterface::updateDatabase, this,
+  connect(_databaseInterface.get(), &DatabaseInterface::updateDatabase, this,
           &BackEnd::onUpdateDatabase);
 }
 
 BackEnd::~BackEnd() {
-  delete _databaseInterface;
-  delete _database;
+  _databaseInterface.reset();
+  _database.reset();
 }
 
 void BackEnd::addProduct(const QString name, const int calories) {
