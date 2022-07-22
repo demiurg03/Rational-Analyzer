@@ -1,8 +1,9 @@
-import QtQuick 2.0
+import QtQuick 2.12
 import QtQuick.Templates 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 import QtQuick.Dialogs 1.3
+
 
 Item {
 
@@ -74,7 +75,7 @@ Item {
 
             SpinBox{
                 id: productCaloriesEdit
-                editable: false
+                editable: true
                 to: 5000
                 wrap: false
                 Layout.fillWidth: true

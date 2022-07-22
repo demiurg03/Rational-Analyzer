@@ -32,4 +32,7 @@ signals:
 private:
   QScopedPointer<Database> _database;
   QScopedPointer<DatabaseInterface> _databaseInterface;
+
+  void installDay();
+
 };

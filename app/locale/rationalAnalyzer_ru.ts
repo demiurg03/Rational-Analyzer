@@ -4,13 +4,33 @@
 <context>
     <name>AddProductItem</name>
     <message>
-        <location filename="../qml/AddProductItem.qml" line="47"/>
-        <source>add product</source>
+        <location filename="../qml/AddProductItem.qml" line="22"/>
+        <source>the name cannot be empty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AddProductItem.qml" line="40"/>
-        <source>Text Field</source>
+        <location filename="../qml/AddProductItem.qml" line="28"/>
+        <source>calories cannot be equal to 0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AddProductItem.qml" line="39"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AddProductItem.qml" line="64"/>
+        <source>Product name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AddProductItem.qml" line="72"/>
+        <source>Calories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AddProductItem.qml" line="90"/>
+        <source>add product</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -37,6 +57,15 @@
     </message>
 </context>
 <context>
+    <name>DayItem</name>
+    <message>
+        <location filename="../qml/DayItem.qml" line="30"/>
+        <location filename="../qml/DayItem.qml" line="38"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>main</name>
     <message>
         <source>Hello World</source>
@@ -48,12 +77,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="33"/>
+        <location filename="../qml/main.qml" line="37"/>
+        <source>day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/main.qml" line="41"/>
         <source>add product</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="36"/>
+        <location filename="../qml/main.qml" line="44"/>
         <source>list product</source>
         <translation type="unfinished"></translation>
     </message>

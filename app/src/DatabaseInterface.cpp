@@ -63,20 +63,50 @@ void DatabaseInterface::appendNewProduct(const Product &product) {
   emit updateDatabase();
 }
 
-void DatabaseInterface::removeProduct(const int id){
+void DatabaseInterface::removeProduct(const int id) {
 
-    auto query = _db->createQuery();
+  auto query = _db->createQuery();
 
-    query.prepare(
-        R"(DELETE FROM Product WHERE ID=:id;)");
+  query.prepare(R"(DELETE FROM Product WHERE ID=:id;)");
 
-    query.bindValue(":id",id);
+  query.bindValue(":id", id);
 
-    if (!query.exec()) {
-      qWarning() << tr("error add product") << query.lastError();
-    }
+  if (!query.exec()) {
+    qWarning() << tr("error add product") << query.lastError();
+  }
 
-    emit updateDatabase();
+  emit updateDatabase();
+}
 
+bool DatabaseInterface::existDay(QDate dayDate) {
+  auto query = _db->createQuery();
 
+  query.prepare(R"(SELECT * FROM Day WHERE date_day=:day;)");
+
+  const auto stringData = dayDate.toString();
+
+  query.bindValue(":day", stringData);
+
+  if (!query.exec()) {
+    qWarning() << tr("error exist day") << query.lastError();
+  }
+
+  return query.next();
+}
+
+void DatabaseInterface::addDay(QDate dayDate) {
+
+  auto query = _db->createQuery();
+
+  query.prepare(
+      R"(INSERT INTO Day(ProductListId, date_day) VALUES(:name,:calories);)");
+
+  const auto stringData = dayDate.toString();
+
+  query.bindValue(":name", rand());
+  query.bindValue(":calories", stringData);
+
+  if (!query.exec()) {
+    qWarning() << tr("error add product") << query.lastError();
+  }
 }

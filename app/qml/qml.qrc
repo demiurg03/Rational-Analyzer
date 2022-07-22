@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>AddProductItem.qml</file>
         <file>ListProductItem.qml</file>
+        <file>DayItem.qml</file>
     </qresource>
 </RCC>

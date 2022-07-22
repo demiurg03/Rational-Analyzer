@@ -1,7 +1,10 @@
 #pragma once
 
-#include "Database.hpp"
 #include <QObject>
+#include <QDate>
+
+#include "Database.hpp"
+
 
 class DatabaseInterface : public QObject {
   Q_OBJECT
@@ -17,6 +20,10 @@ public:
   void appendNewProduct(const Product &product);
 
   void removeProduct(const int id);
+
+  bool existDay(QDate dayDate);
+
+  void addDay(QDate dayDate);
 
 signals:
   void updateDatabase();

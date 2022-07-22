@@ -26,13 +26,18 @@ QSqlQuery Database::createQuery() {
 void Database::_createTable() {
   QSqlQuery query(_db);
 
-  const auto sql = readAllFromFile(":/createTable.sql");
+  const auto sqlLines = readAllLineFromFile(":/createTable.sql");
 
-  if (!query.exec(sql)) {
+  for(const auto &line : sqlLines){
 
-    qCritical() << tr("db error create Product") << query.lastError();
-    throw;
+      if (!query.exec(line)) {
+
+        qCritical() <<  query.lastError();
+        throw;
+      }
   }
+
+
 }
 
 //###

@@ -15,6 +15,10 @@ ApplicationWindow {
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
 
+        DayItem{
+
+        }
+
         AddProductItem{
 
         }
@@ -28,6 +32,10 @@ ApplicationWindow {
     footer: TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
+
+        TabButton {
+            text: qsTr("day")
+        }
 
         TabButton {
             text: qsTr("add product")

@@ -10,6 +10,10 @@ BackEnd::BackEnd() : QObject(nullptr) {
 
   connect(_databaseInterface.get(), &DatabaseInterface::updateDatabase, this,
           &BackEnd::onUpdateDatabase);
+
+
+   installDay();
+
 }
 
 BackEnd::~BackEnd() {
@@ -37,3 +41,14 @@ void BackEnd::removeProduct(const int id) {
 }
 
 void BackEnd::onUpdateDatabase() { emit updateDatabase(); }
+
+void BackEnd::installDay(){
+
+    const auto currentDate = QDate::currentDate();
+    const auto dayExist = _databaseInterface->existDay(currentDate);
+
+
+    if(!dayExist){
+        _databaseInterface->addDay(QDate::currentDate());
+    }
+}
