@@ -2,6 +2,8 @@
 
 BackEnd::BackEnd() : QObject(nullptr) {
 
+    qRegisterMetaType<DayInfo>();
+
   _database.reset(new Database);
 
   _database->open();

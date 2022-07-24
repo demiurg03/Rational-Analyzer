@@ -75,6 +75,7 @@ Item {
 
             SpinBox{
                 id: productCaloriesEdit
+                stepSize: 10
                 editable: true
                 to: 5000
                 wrap: false

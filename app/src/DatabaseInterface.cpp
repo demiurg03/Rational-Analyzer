@@ -110,3 +110,10 @@ void DatabaseInterface::addDay(QDate dayDate) {
     qWarning() << tr("error add product") << query.lastError();
   }
 }
+
+void DatabaseInterface::addProductToDay(const QDate dayDate, const int id){
+
+
+
+
+}

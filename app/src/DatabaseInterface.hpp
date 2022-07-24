@@ -25,6 +25,9 @@ public:
 
   void addDay(QDate dayDate);
 
+  void addProductToDay(const QDate dayDate, const int id);
+
+
 signals:
   void updateDatabase();
 

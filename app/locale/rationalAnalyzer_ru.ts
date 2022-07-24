@@ -29,7 +29,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AddProductItem.qml" line="90"/>
+        <location filename="../qml/AddProductItem.qml" line="91"/>
         <source>add product</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41,27 +41,27 @@
         <source>db error open</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../src/Database.cpp" line="33"/>
-        <source>db error create Product</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DatabaseInterface</name>
     <message>
         <location filename="../src/DatabaseInterface.cpp" line="60"/>
-        <location filename="../src/DatabaseInterface.cpp" line="76"/>
+        <location filename="../src/DatabaseInterface.cpp" line="75"/>
+        <location filename="../src/DatabaseInterface.cpp" line="110"/>
         <source>error add product</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/DatabaseInterface.cpp" line="91"/>
+        <source>error exist day</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>DayItem</name>
     <message>
-        <location filename="../qml/DayItem.qml" line="30"/>
-        <location filename="../qml/DayItem.qml" line="38"/>
-        <source>Text</source>
+        <location filename="../qml/DayItem.qml" line="46"/>
+        <source>text</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

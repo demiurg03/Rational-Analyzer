@@ -4,5 +4,6 @@
         <file>AddProductItem.qml</file>
         <file>ListProductItem.qml</file>
         <file>DayItem.qml</file>
+        <file>addDayProduct.qml</file>
     </qresource>
 </RCC>
